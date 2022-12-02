@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+    <form method="post" action="/edit?ID={id}">
+        <table class="table table-striped">
+            <tr>
+                <td>ID</td>
+                <td><input type="text" name="ID" valueID disabled></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" valueName></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" valueEmail></td>
+            </tr>
+            <tr>
+                <td>Birthday</td>
+                <td><input type="text" name="birthday" valueBirthday></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" name="phone" valuePhone></td>
+            </tr>
+        </table>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</body>
+</html>
