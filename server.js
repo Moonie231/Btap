@@ -1,7 +1,7 @@
 const http = require('http')
 const url = require('url')
 const HomeController = require('./src/controller/homecontroller')
-const UserController  = require('./src/controller/userController')
+const StudentController  = require('./src/controller/StudentController')
 const qs = require("qs");
 
 
@@ -14,15 +14,14 @@ const server =http.createServer((req,res)=>{
             HomeController.showList(req,res)
             break;
         case "/add":
-            console.log(ID)
-            UserController.addUser(req, res)
+            StudentController.addStudent(req, res)
             break;
         case `/edit?ID=${ID}`:
-            UserController.editUser(req,res)
+            StudentController.editStudent(req,res)
             break;
         case `/delete?ID=${ID}`:
-            UserController.deleteUser(req, res)
-            break
+            StudentController.deleteStudent(req, res)
+            break;
     }
 })
 

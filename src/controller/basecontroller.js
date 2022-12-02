@@ -1,4 +1,4 @@
-const connect = require("../model/dbconnect");
+const connect = require("../model/database");
 const fs = require ('fs');
 
 class BaseController {
@@ -24,8 +24,8 @@ class BaseController {
         })
     }
 
-    static async getUserID (ID) {
-       let sql = `select * from user where ID = '${ID}'`
+    static async getStudentID (ID) {
+       let sql = `select * from student where ID = '${ID}'`
         let request = this.querySQL(sql)
         return request
     }

@@ -6,7 +6,7 @@ class Homecontroller extends BaseController {
     static showList = async (req, res) => {
         let dataHTML = await BaseController.readFile('./view/home.html');
         let homeHTML = '';
-        let sql = `select * from user`;
+        let sql = `select * from Student`;
         let request = await BaseController.querySQL(sql);
 
 
@@ -15,9 +15,8 @@ class Homecontroller extends BaseController {
                 `<tr>
                     <td>${item.ID}</td>
                     <td>${item.name}</td>
-                    <td>${item.email}</td>
-                    <td>${item.birthday}</td>
-                    <td>${item.phone}</td>
+                    <td>${item.classroom}</td>
+                    <td>${item.evaluate}</td>
                     <td><a href="/edit?ID=${item.ID}"><button type="button" class="btn btn-primary">Edit</button></a> </td>
                     <td><a href="/delete?ID=${item.ID}"><button type="button" class="btn btn-danger">Delete</button></a> </td>
                 </tr>`
