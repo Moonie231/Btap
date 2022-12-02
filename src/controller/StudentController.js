@@ -82,7 +82,7 @@ class StudentController extends BaseController {
         let id=+index.id;
         let sql = `delete from student where ID = ${id}`;
         let result=await this.querySQL(sql);
-        res.writeHead(301,{Location:'/'});
+        res.writeHead(301, {Location:'/'});
         res.end();
     }
 }

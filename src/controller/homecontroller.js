@@ -18,7 +18,7 @@ class Homecontroller extends BaseController {
                     <td>${item.classroom}</td>
                     <td>${item.evaluate}</td>
                     <td><a href="/edit?ID=${item.ID}"><button type="button" class="btn btn-primary">Edit</button></a> </td>
-                    <td><a href="/delete?ID=${item.ID}"><button type="button" class="btn btn-danger">Delete</button></a> </td>
+                    <td><button type="button" class="btn btn-danger"><a href="/delete?ID=${item.ID}">Delete</a></button> </td>
                 </tr>`
         })
         res.writeHead(200, 'Content-Type', 'text/html');

@@ -1,0 +1,16 @@
+create database Student;
+ use Student ;
+
+ create table Student (
+ ID int primary key auto_increment,
+ name varchar(50) not null,
+ classroom varchar(255) not null,
+ theoreticalPoint int(2) not null,
+ successPoint int(2) not null,
+ evaluate varchar(255),
+description varchar(255)
+ );
+
+ insert into Student (name, classroom, theoreticalPoint, successPoint, evaluate, description)
+ values ('abc','abc', 8, 6, 'mo ta 1', 'danh gia 1'),
+		('cgh','gvj', 5, 8, 'mo ta 2', 'danh gia 2')
